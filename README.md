@@ -7,3 +7,8 @@ Created by [Brendan Murty](https://github.com/brendanmurty).
 
 ## Local Server
 
+
+## Other Commands
+
+Please refer to the [React documentation](docs/react.md) for further details.
+
