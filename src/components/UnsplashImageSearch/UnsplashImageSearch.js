@@ -14,7 +14,7 @@ class UnsplashImageSearch extends Component {
 
   render() {
     if (this.props.query) {
-      fetch(process.env.REACT_APP_UNSPLASH_API_URL + 'search/photos/?client_id=' + process.env.REACT_APP_UNSPLASH_API_KEY + '&query=' + this.props.query)
+      fetch(process.env.REACT_APP_UNSPLASH_API_URL + 'search/photos/?client_id=' + process.env.REACT_APP_UNSPLASH_API_KEY + '&per_page=32&query=' + this.props.query)
         .then(response => response.json())
         .then(
           (response) => {
