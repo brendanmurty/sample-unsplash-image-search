@@ -1,6 +1,7 @@
 import image from 'assets/image.svg';
 import './App.css';
 import SearchField from 'components/SearchField/SearchField';
+import ListImages from 'components/ListImages/ListImages';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
           Search Unsplash images
         </p>
         <SearchField />
+        <ListImages />
       </header>
     </div>
   );
