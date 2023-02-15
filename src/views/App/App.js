@@ -1,9 +1,17 @@
 import image from 'assets/image.svg';
 import './App.css';
 import SearchField from 'components/SearchField/SearchField';
-import ListImages from 'components/ListImages/ListImages';
+import UnsplashImageSearch from 'components/UnsplashImageSearch/UnsplashImageSearch';
+import { useState } from 'react';
 
 function App() {
+
+  const [queryText, setQueryText] = useState("");
+
+  let queryInputHandler = (event) => {
+    setQueryText(event.target.value);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -11,8 +19,8 @@ function App() {
         <p>
           Search Unsplash images
         </p>
-        <SearchField />
-        <ListImages />
+        <SearchField onChange={queryInputHandler} />
+        <UnsplashImageSearch query={queryText} />
       </header>
     </div>
   );

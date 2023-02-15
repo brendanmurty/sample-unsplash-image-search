@@ -1,6 +1,16 @@
+import { Component } from "react";
 
-export default function SearchField() {
-  return (
-    <input type="text" className="SearchField-input" placeholder="sunset"></input>
-  );
+class SearchField extends Component {
+  render() {
+    return (
+      <input
+        type="text"
+        className="SearchField-input"
+        placeholder="sunset"
+        onChange={this.props.onChange}
+      ></input>
+    )
+  }
 }
+
+export default SearchField;
