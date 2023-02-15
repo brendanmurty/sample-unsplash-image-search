@@ -1,0 +1,16 @@
+ul.ListImages-list {
+  list-style: none outside none;
+  margin: 20px auto;
+  padding: 0;
+}
+
+ul.ListImages-list li {
+  float: left;
+  margin: 0 10px 20px;
+}
+
+ul.ListImages-list li,
+ul.ListImages-list img {
+  width: 200px;
+  height: 100px;
+}
