@@ -1,7 +1,6 @@
 
-
 export default function SearchField() {
   return (
-    <input type="text" class="SearchField-input" placeholder="sunset"></input>
+    <input type="text" className="SearchField-input" placeholder="sunset"></input>
   );
 }
