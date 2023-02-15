@@ -2,6 +2,8 @@
 
 Created by [Brendan Murty](https://github.com/brendanmurty).
 
+I've used some icons from the open source [Feather icon pack](https://feathericons.com/).
+
 ## Requirements
 
 1. Setup a new Unsplash API app
