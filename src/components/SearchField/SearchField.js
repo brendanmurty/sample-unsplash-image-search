@@ -4,10 +4,9 @@ class SearchField extends Component {
   render() {
     return (
       <input
-        type="text"
+        type="search"
         className="SearchField-input"
-        placeholder="sunset"
-        onChange={this.props.onChange}
+        onKeyUp={(e) => this.props.onChange(e) }
       ></input>
     )
   }
