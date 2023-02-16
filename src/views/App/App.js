@@ -1,4 +1,6 @@
+// eslint-disable-next-line
 import { Component, setState } from 'react';
+
 import image from 'assets/image.svg';
 import './App.css';
 import SearchField from 'components/SearchField/SearchField';
