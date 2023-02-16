@@ -1,0 +1,8 @@
+.SearchField-input {
+  line-height: 50px;
+  padding: 0 10px;
+  background-color: #111;
+  border: 1px solid #25FFD4;
+  color: #fff;
+  border-radius: 10px;
+}
