@@ -1,8 +1,16 @@
-# An example system that searches images hosted on Unsplash
+# sample-unsplash-image-search
 
-Created by [Brendan Murty](https://github.com/brendanmurty).
+## Summary
 
-I've used some icons from the open source [Feather icon pack](https://feathericons.com/).
+An example system created by [Brendan Murty](https://github.com/brendanmurty) that searches public images hosted on [Unsplash](https://unsplash.com/).
+
+An icon from the open source [Feather icon pack](https://feathericons.com/) was used as the app icon here.
+
+## Screenshots
+
+![Search results example](docs/assets/screenshot-search-results.png)
+
+![Empty state example](docs/assets/screenshot-empty-state.png)
 
 ## Requirements
 
