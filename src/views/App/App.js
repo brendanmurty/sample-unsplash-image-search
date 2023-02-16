@@ -64,11 +64,13 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={image} className="App-logo" alt="logo" />
-          <p>
-            Search Unsplash images for
-          </p>
-          <SearchField onChange={this.searchQuery} />
+          <div className="App-header-content">
+            <img src={image} className="App-logo" alt="logo" />
+            <p>
+              Search <a href="https://unsplash.com/">Unsplash</a> images for
+            </p>
+            <SearchField onChange={this.searchQuery} />
+          </div>
         </header>
         <main className="App-content">
           <ListImages images={this.state.imageResults} />
