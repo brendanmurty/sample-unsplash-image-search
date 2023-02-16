@@ -16,6 +16,7 @@
  * 
  **/
 function UnsplashApiRequest(endpoint, params) {
+
   const UnsplashApiUrl = process.env.REACT_APP_UNSPLASH_API_URL;
   const UnsplashApiKey = process.env.REACT_APP_UNSPLASH_API_KEY;
 
@@ -25,6 +26,7 @@ function UnsplashApiRequest(endpoint, params) {
     params.join('&');
 
   return fetch(apiRequestUrl).then(response => response.json());
+
 }
 
 export default UnsplashApiRequest;

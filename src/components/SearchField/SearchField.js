@@ -1,4 +1,5 @@
 import { Component } from "react";
+
 import "./SearchField.css";
 
 /**
@@ -12,7 +13,9 @@ import "./SearchField.css";
  * 
  **/
 class SearchField extends Component {
+
   render() {
+
     return (
       <input
         type="search"
@@ -21,7 +24,9 @@ class SearchField extends Component {
         autoFocus
       ></input>
     )
+
   }
+
 }
 
 export default SearchField;

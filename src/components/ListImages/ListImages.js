@@ -12,6 +12,7 @@ import "./ListImages.css";
 class ListImages extends Component {
 
   render() {
+
     return (
       <div className="ListImages-container">
         <ul className="ListImages-list">
@@ -31,6 +32,7 @@ class ListImages extends Component {
         </ul>
       </div>
     );
+  
   }
 
 }

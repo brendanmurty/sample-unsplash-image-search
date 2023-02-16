@@ -1,6 +1,6 @@
 import { Component } from "react";
-import "./RandomImage.css";
 
+import "./RandomImage.css";
 import UnsplashApiRequest from 'common/UnsplashApiRequest';
 
 /**
@@ -13,16 +13,20 @@ import UnsplashApiRequest from 'common/UnsplashApiRequest';
  * 
  **/
 class RandomImage extends Component {
+
   constructor(props) {
+
     super(props);
 
     this.state = {
       image: false,
       isProcessing: false
     };
+
   }
 
   componentDidMount() {
+
     if (!this.state.isProcessing) {
       this.setState({
         isProcessing: true
@@ -44,9 +48,11 @@ class RandomImage extends Component {
           }
         );
     }
+
   }
 
   render() {
+
     if (!this.state.isProcessing && this.state.image) {
       return (
         <div className="RandomImage-container">
@@ -63,7 +69,9 @@ class RandomImage extends Component {
         </div>
       );
     }
+
   }
+
 }
 
 export default RandomImage;

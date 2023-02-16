@@ -18,6 +18,7 @@ import UnsplashApiRequest from 'common/UnsplashApiRequest';
 class App extends Component {
 
   constructor(props) {
+
     super(props);
 
     this.state = {
@@ -26,9 +27,11 @@ class App extends Component {
     };
 
     this.searchQuery = this.searchQuery.bind(this);
+
   }
 
   searchQuery(event) {
+
     // Send a API request only if the text field is non-empty and
     // the system is not currently completing another request
     if (!this.state.isProcessing) {
@@ -59,9 +62,11 @@ class App extends Component {
         });
       }
     }
+
   }
 
   render() {
+
     return (
       <div className="App">
         <header className="App-header">
@@ -82,7 +87,9 @@ class App extends Component {
         </main>
       </div>
     );
+
   }
+
 }
 
 export default App;
