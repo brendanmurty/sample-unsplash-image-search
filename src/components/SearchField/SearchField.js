@@ -17,6 +17,7 @@ class SearchField extends Component {
         type="search"
         className="SearchField-input"
         onKeyUp={(e) => this.props.onChange(e) }
+        autoFocus
       ></input>
     )
   }
