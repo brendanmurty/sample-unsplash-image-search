@@ -63,6 +63,8 @@ class RandomImage extends Component {
             title={'Image by ' + this.state.image.user.name}/>
           <a 
             className="RandomImage-link"
+            target="_blank"
+            rel="noreferrer"
             href={this.state.image.links.html}>
             Image by {this.state.image.user.name}
           </a>
