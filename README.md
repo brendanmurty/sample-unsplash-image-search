@@ -24,6 +24,8 @@ I've used some icons from the open source [Feather icon pack](https://featherico
 4. Run `npm install`
 5. Create the environment configuration file: `cp -n .env.example .env`
 6. Edit `.env` and add the appropriate values
+  - `REACT_APP_UNSPLASH_API_KEY`: Copy over the full value of the **Access Key** from your Unsplash Application detail page
+  - `REACT_APP_UNSPLASH_API_URL`: This is for future-proofing in case Unsplash introduce API versioning in the future
 
 ## Local Server
 
