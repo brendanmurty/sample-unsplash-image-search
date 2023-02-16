@@ -88,8 +88,22 @@ body {
   color: #fff;
 }
 
-.App-header {
-  
+.App {
+  margin: 10px 20px 20px;
+}
+
+.App-header > * {
+  /* Line up all of the first-level header elements */
+  float: left;
+  margin-right: 10px;
+  line-height: 50px;
+}
+
+.App-header,
+.App-content {
+  width: 100%;
+  float: left;
+  clear: both;
 }
 
 .App-logo {

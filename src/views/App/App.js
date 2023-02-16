@@ -66,11 +66,11 @@ class App extends Component {
         <header className="App-header">
           <img src={image} className="App-logo" alt="logo" />
           <p>
-            Search Unsplash images
+            Search Unsplash images for
           </p>
-        </header>
-        <main>
           <SearchField onChange={this.searchQuery} />
+        </header>
+        <main className="App-content">
           <ListImages images={this.state.imageResults} />
         </main>
       </div>
