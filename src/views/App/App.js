@@ -5,6 +5,13 @@ import SearchField from 'components/SearchField/SearchField';
 import ListImages from 'components/ListImages/ListImages';
 import UnsplashApiRequest from 'common/UnsplashApiRequest';
 
+/**
+ * View: App
+ * 
+ * The main page for this sample app, which shows a heading, search field
+ * and a list of image results based on the text value of the search field.
+ * 
+ **/
 class App extends Component {
 
   constructor(props) {
@@ -19,11 +26,12 @@ class App extends Component {
   }
 
   searchQuery(event) {
+    // Send a API request only if the text field is non-empty and
+    // the system is not currently completing another request
     if (event.target.value && !this.state.isProcessing) {
       this.setState({ isProcessing: true });
 
       UnsplashApiRequest('search/photos', ['per_page=32', 'query=' + event.target.value])
-        .then(response => response.json())
         .then(
           (response) => {
             this.setState({
