@@ -30,18 +30,33 @@ class App extends Component {
   searchQuery(event) {
     // Send a API request only if the text field is non-empty and
     // the system is not currently completing another request
-    if (event.target.value && !this.state.isProcessing) {
-      this.setState({ isProcessing: true });
+    if (!this.state.isProcessing) {
+      if (event.target.value) {
+        // We have a search query
 
-      UnsplashApiRequest('search/photos', ['per_page=32', 'query=' + event.target.value])
-        .then(
-          (response) => {
-            this.setState({
-              imageResults: response.results ? response.results : [],
-              isProcessing: false
-            });
-          }
-        );
+        // Set the processing state to avoid sending another API
+        // request before this request has completed
+        this.setState({ isProcessing: true });
+
+        UnsplashApiRequest('search/photos', ['per_page=32', 'query=' + event.target.value])
+          .then(
+            (response) => {
+              // At this point, "response" could be empty for various reasons
+              // but for the purposes of this sample project, these states aren't
+              // handled. In a production-ready system, this should also catch errors
+              // that could occur if the API was unreachable or the API key didn't work.
+              this.setState({
+                imageResults: response.results ? response.results : [],
+                isProcessing: false
+              });
+            }
+          );
+      } else {
+        // Search query is empty, clear the image results
+        this.setState({
+          imageResults: []
+        });
+      }
     }
   }
 
