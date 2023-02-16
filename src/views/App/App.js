@@ -1,10 +1,11 @@
-// eslint-disable-next-line
-import { Component, setState } from 'react';
+import { Component } from 'react';
 
 import image from 'assets/image.svg';
 import './App.css';
+
 import SearchField from 'components/SearchField/SearchField';
 import ListImages from 'components/ListImages/ListImages';
+import RandomImage from "components/RandomImage/RandomImage";
 import UnsplashApiRequest from 'common/UnsplashApiRequest';
 
 /**
@@ -43,8 +44,8 @@ class App extends Component {
             (response) => {
               // At this point, "response" could be empty for various reasons
               // but for the purposes of this sample project, these states aren't
-              // handled. In a production-ready system, this should also catch errors
-              // that could occur if the API was unreachable or the API key didn't work.
+              // handled. In a production-ready system, the "UnsplashApiRequest" function
+              // would should also catch various error states.
               this.setState({
                 imageResults: response.results ? response.results : [],
                 isProcessing: false
@@ -73,7 +74,11 @@ class App extends Component {
           </div>
         </header>
         <main className="App-content">
+          {this.state.imageResults.length > 0 ? (
           <ListImages images={this.state.imageResults} />
+          ) : (
+          <RandomImage />
+          )}
         </main>
       </div>
     );

@@ -1,0 +1,12 @@
+.RandomImage-image {
+  width: 100%;
+  max-width: 1080px;
+  margin: 20px auto;
+}
+
+.RandomImage-link {
+  text-align: center;
+  margin-top: 10px;
+  width: 100%;
+  display: block;
+}
