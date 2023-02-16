@@ -2,15 +2,41 @@ ul.ListImages-list {
   list-style: none outside none;
   margin: 20px auto;
   padding: 0;
+
+  /* Show the images in the list in a 4x4 grid with spacing */
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 200px 200px 200px 200px;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 25px 25px;
+  grid-template-areas:
+    ". . . ."
+    ". . . ."
+    ". . . ."
+    ". . . .";
+  width: 100%;
+  max-width: 900px;
 }
 
-ul.ListImages-list li {
-  float: left;
-  margin: 0 10px 20px;
-}
-
-ul.ListImages-list li,
 ul.ListImages-list img {
-  width: 200px;
-  height: 100px;
+  /*
+  Force the size of each image to keep the grid layout,
+  but alter the displayed section of the image so it isn't
+  stretched or shrinked to fit this size.
+  */
+  width: 400px;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Medium sized screens */
+
+@media only screen and (max-width: 900px) {
+  ul.ListImages-list {
+    grid-template-columns: 200px 200px 200px;
+    grid-template-areas:
+        ". . ."
+        ". . ."
+        ". . .";
+  }
 }

@@ -20,9 +20,9 @@ class ListImages extends Component {
             <a href={image.links.html}>
               <span className="ListImages-item-image">
                 {image.description ? (
-                <img src={image.urls.thumb} alt={image.description} title={image.user.name + ' - ' + image.description } />
+                <img src={image.urls.small} alt={image.description} title={image.user.name + ' - ' + image.description } />
                 ) : (
-                <img src={image.urls.thumb} alt={'Image by ' + image.user.name} title={'Image by ' + image.user.name} />
+                <img src={image.urls.small} alt={'Image by ' + image.user.name} title={'Image by ' + image.user.name} />
                 )}
               </span>
             </a>
