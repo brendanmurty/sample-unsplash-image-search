@@ -10,7 +10,7 @@
  * or allow them to filter photo results by just the photos they've uploaded.
  * 
  * This should also handle the situation where the API returns a rate limiting
- * or error state.
+ * response or an error state.
  * 
  * Related Unsplash API documentation: https://unsplash.com/documentation
  * 
