@@ -53,9 +53,11 @@ class App extends Component {
           <p>
             Search Unsplash images
           </p>
+        </header>
+        <main>
           <SearchField onChange={this.searchQuery} />
           <ListImages images={this.state.imageResults} />
-        </header>
+        </main>
       </div>
     );
   }
